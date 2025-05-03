@@ -1,0 +1,28 @@
+##Apply both k8's manifet files:
+1. kubectl apply -f k8s/flask-deployment.yaml
+2. kubectl apply -f k8s/flask-service.yaml
+
+##If you are newly installing helm charts of Prometheus:
+1. helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+2. helm repo update
+3. helm install prometheus prometheus-community/prometheus -f prometheus-values.yaml
+
+
+##For Grafana:
+1. helm install grafana grafana/grafana
+2. helm repo update
+3. helm install grafana grafana/grafana -f grafana-values.yaml
+
+
+## URL's can be accessed through:
+1. Flask App: http://<minikube-ip>:30500
+
+2. Prometheus: http://<minikube-ip>:30090
+
+3. Grafana: http://<minikube-ip>:30030
+
+
+
+
+1. helm delete <name of the release>
+
