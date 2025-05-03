@@ -23,6 +23,11 @@
 
 
 
+#From garafan login details:
+1. kubectl get secret --namespace default grafana -o yaml
+2. echo "RkpwY21aTFNXRDVJN3Z4RWFFUjlibkV1SDBDbnFBendadmc0bmROZQ==" | openssl base64 -d ; echo
+
+
 
 1. helm delete <name of the release>
 
