@@ -1,0 +1,13 @@
+service:
+  type: NodePort
+  nodePort: 30090
+
+podAnnotations:
+  prometheus.io/scrape: "true"
+  prometheus.io/port: "5000"
+
+scrapeConfigs:
+  - job_name: 'flask-app'
+    static_configs:
+      - targets: ['flask-app.default.svc.cluster.local:5000']
+
